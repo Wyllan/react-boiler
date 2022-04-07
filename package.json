@@ -1,0 +1,63 @@
+{
+  "name": "erp-system",
+  "version": "1.0.0",
+  "description": "internal planning and reports system",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "check": "tsc --noEmit --skipLibCheck",
+    "test": "jest",
+    "lint": "npm run lint:css & npm run lint:js",
+    "lint:css": "stylelint './src/**/*.{js,jsx,ts,tsx,css}'",
+    "lint:js": "eslint './src/**/*.{js,jsx,ts,tsx}'",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testdrivensolutions/erp-system.git"
+  },
+  "keywords": [
+    "react",
+    "boilerplate",
+    "linting"
+  ],
+  "author": "TDS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/testdrivensolutions/erp-system/issues"
+  },
+  "homepage": "https://github.com/testdrivensolutions/erp-system#readme",
+  "devDependencies": {
+    "@stylelint/postcss-css-in-js": "^0.37.2",
+    "@types/react": "^17.0.43",
+    "@types/react-dom": "^17.0.14",
+    "@types/styled-components": "^5.1.24",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "jest-styled-components": "^7.0.8",
+    "lint-staged": "^12.3.7",
+    "parcel": "^2.4.0",
+    "postcss-syntax": "^0.36.2",
+    "prettier": "2.6.1",
+    "sharp": "^0.29.3",
+    "stylelint": "^14.6.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^25.0.0"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "styled-components": "^5.3.5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{js,jsx,ts,tsx,css}": "stylelint --fix",
+    "*": "prettier --ignore-unknown --write"
+  }
+}
